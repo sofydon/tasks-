@@ -42,8 +42,9 @@ secondTask();
 function thirdTask() {
     // при помощи цикла for выведите все четные числа от 2 до 10 включительно
     for (let i = 2; i <= 10; i++) {
-        if (i % 2) continue;
-        console.log(i);
+        if (i % 2 === 0) {
+            console.log(i);
+        }        
     }
 }
 thirdTask();
@@ -75,7 +76,7 @@ function fifthTask() {
 
     // заполнить массив цифрами от 5 до 10.
     for (let i = 5; i <= 10; i++) {
-        arrayOfNumbers [i - 5] =i;
+        arrayOfNumbers [i - 5] = i;
     }
     console.log(arrayOfNumbers);
     
@@ -84,3 +85,50 @@ function fifthTask() {
 }
 fifthTask();
 
+function sixthTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const arr = [3, 5, 8, 16, 20, 23, 50];
+    const result = [];
+
+    // заполнить новый массив числами из старого
+
+    for (let i = 0; i < arr.length; i++) {
+        result [i] = arr [i]; 
+    }
+    console.log(result);
+    
+    // Не трогаем
+    return result;
+}
+sixthTask();
+
+function seventhTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    // измените массив так, чтобы все числа были увеличены в 2 раза, а если строка - добавить done.
+    for (let i = 0; i < data.length; i++) {
+        if (typeof(data[i]) === 'number') {
+            data[i] = data[i] * 2;
+        } if (typeof(data[i]) === 'string') {
+            data[i] = `${data[i]} - done`;
+        }
+    }
+    console.log(data);
+    return data;
+}
+seventhTask();
+
+function eighthTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+
+    // развернуть массив
+    for (let i = 0; i < data.length; i++ ) {
+        result[i] = data[(data.length - 1) - i];
+    }
+    
+    console.log(result);
+    return result;
+}
+eighthTask();
