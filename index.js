@@ -132,3 +132,64 @@ function eighthTask() {
     return result;
 }
 eighthTask();
+
+// *
+// ** 
+// ***
+// ****
+// *****
+// ******
+let result = '';
+const length = 7;
+for (let i = 1; i < length; i++) { 
+    for (let j = 0; j < i; j++) {
+        result +="*";
+    }
+    result += '\n';
+}
+console.log(result);
+
+//1
+//1 2
+//1 2 3
+//1 2 3 4
+//1 2 3 4 5
+for (let i = 1; i <= 5; i++) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+        str = str + j;
+    }
+    console.log(str);
+}
+
+//1
+//2 2
+//3 3 3
+//4 4 4 4
+//5 5 5 5 5 
+let str = "12345";
+for (let i = 1; i <= 5; i++) {
+    let number = str[i - 1];
+    console.log((number + "").repeat(i));
+}
+
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+// ***********
+
+const lines = 5;
+let res = '';
+for (let i = 0; i <= lines; i++) {
+    for (let j = 0; j < lines - i; j++) {
+        res += " ";
+    }
+    for (let j = 0; j < 2*i-1; j++) {
+        res +="*";
+    }
+    res += '\n';
+}
+console.log(res);
+
