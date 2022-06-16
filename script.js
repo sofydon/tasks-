@@ -97,4 +97,35 @@ console.log(spacify('12345'));
 /*Create a function that will return a string that combines all of the letters of the three inputed strings in groups.
 Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter,
 see example below! E.g. Input: "aa", "bb" , "cc" => Output: "abcabc" */
+function tripleTrouble(one, two, three){
+    let str = '';
+    for (let i = 0; i < one.length; i++) {
+        str += one[i] + two[i] + three[i];
+    }
+    return str;
+}
+console.log(tripleTrouble('aa', 'bb', 'cc'));
 
+/*Given a string made up of letters a, b, and/or c, switch the position of letters a and b 
+(change a to b and vice versa) Leave any incidence of c untouched. Example: 'acb' --> 'bca' 'aabacbaa' --> 'bbabcabb'*/
+//regexp
+function switcheroo(x){ 
+    return x.replace(/[ab]/g,x=>x=="a"?"b":"a")
+}
+console.log(switcheroo('aabacbaa'));
+
+//loop
+function switcheroo(x){
+    let str = '';
+    for (let i = 0; i < x.length; i++) {
+        if ( x[i] === 'a') {
+            str = str + 'b';
+        } else if (x[i] === 'b') {
+            str += 'a';
+        } else {
+            str += x[i];
+        }
+    }
+    return str;
+}
+console.log(switcheroo('acb'));
