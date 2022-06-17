@@ -110,7 +110,7 @@ console.log(tripleTrouble('aa', 'bb', 'cc'));
 (change a to b and vice versa) Leave any incidence of c untouched. Example: 'acb' --> 'bca' 'aabacbaa' --> 'bbabcabb'*/
 //regexp
 function switcheroo(x){ 
-    return x.replace(/[ab]/g,x=>x=="a"?"b":"a")
+    return x.replace(/[ab]/g,x=>x=="a"?"b":"a");
 }
 console.log(switcheroo('aabacbaa'));
 
@@ -129,3 +129,32 @@ function switcheroo(x){
     return str;
 }
 console.log(switcheroo('acb'));
+
+/*you will be given a string that may have mixed uppercase and lowercase letters and your task is to convert 
+that string to either lowercase only or uppercase only based on:
+make as few changes as possible.
+if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+For example: solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase. */
+function solve(s){
+  let up = s.split('').filter(word => word.match(/[A-Z]/)).length;
+  let down = s.split('').filter(word => word.match(/[a-z]/)).length;
+  if (down >= up) {
+    return s.toLowerCase();
+  } else {
+    return s.toUpperCase();
+  }
+}
+console.log(solve('CODewar'));
+
+
+
+
+
+
+
+
+
+
+
+
+

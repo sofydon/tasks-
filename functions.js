@@ -53,8 +53,7 @@ console.log(toCamelCase("I-love-code"));
 
 
 function camelize(str) {
-    return str.replace(/\W+(.)/g, function(match, chr)
-     {
+    return str.replace(/W+(.)/g, function(match, chr){
           return chr.toUpperCase();
       });
 }
