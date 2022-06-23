@@ -178,10 +178,24 @@ function correct(string) {
 console.log(correct("L0ND0N"));
 console.log(correct('DUBL1N'));
 
+/* you are asked to square every digit of a number and concatenate them.
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. */
+function squareDigits(num){  
+    return +(num.toString().split('').map(i => i * i).join(''));
+}
+console.log(squareDigits(9119));
 
-
-
-
+/*remove the spaces from the string, then return the resultant string.*/
+//split and join method
+function noSpace(x){
+    return x.split(' ').join('');
+}
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
+//regex
+function noSpace(x){
+    return x.replace( / /g, '')
+}
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
 
 
 
