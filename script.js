@@ -1,44 +1,4 @@
-// let num = 123;
-// alert(num);
-
-// // let a = 1;
-// // let b = 2;
-// // let c = 3;
-
-// // let a = 1, b = 2, c =3;
-
-// // let a,b,c;
-// //  a = 1;
-// //  b = 2;
-// //  c = 3;
-
-// // let a = 10;
-// // console.log(a);
-// // a = 20;
-// // console.log(a);
-
-// let str1 = 'xxx';
-// let str2 = 'yyy';
-// let txt = `aaa ${str1} bbb ${str2} ccc`;
-// console.log(txt);
-
-// let number = 1234;
-// console.log(String(number).length);
-
-// let test = Boolean('');
-// console.log(test);
-
-// let text = 'abcde';
-// let other = text[4] + text[3] + text[2] + text[1] + text[0];
-// console.log(other);
-
-// let str = String(12345);
-// console.log((str[4])+ (str[3]) + (str[2]) + (str[1]) + (str[0]));
-
-// let num1 = 3;
-// let num2 = num1++;
-// console.log(num1);
-// console.log(num2);
+'use strict';
 
 const arr = [1, 2, 3, 4, 5, null,'6'];
     for (let i = 0; i < arr.length; i++) {
@@ -193,7 +153,7 @@ function noSpace(x){
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
 //regex
 function noSpace(x){
-    return x.replace( / /g, '')
+    return x.replace( / /g, '');
 }
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
 
@@ -227,7 +187,42 @@ function lovefunc(flower1, flower2){
 }
 console.log(lovefunc(3, 4));
 
+/* Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated 
+exactly n times. */
+//for loop
+function repeatStr (n, s) {
+    let newStr = '';
+    for(let i = 0; i < n; i++){
+        newStr += s;
+    }
+    return newStr;
+}
+console.log(repeatStr(5, "Hello"));
+// string method
+function repeatStr (n, s) {
+    return s.repeat(n);
+}
+console.log(repeatStr(5, "L"));
+/* Here we have a function that help us spam our hearty laughter. But is not working! I need you to find out why...
+Expected results: spam(6);  // huehuehuehuehuehue */ 
+function spam(number){
+    return 'hue'.repeat(number);
+}
+console.log(spam(6)); 
 
-
+/* Create a function that takes a string and an integer (n).
+The function should return a string that repeats the input string n number of times.
+If anything other than a string is passed in you should return "Not a string"
+Example "Hi", 2 --> "HiHi"; 1234, 5 --> "Not a string" */
+var repeatIt = function(str, n) {
+    let myStr = "";
+    for (let i = 0; i < n; i++) {
+        myStr += str;
+    } if (typeof(str) != 'string'){
+        return 'Not a string';
+    }
+    return myStr;
+};
+console.log(repeatIt('hi', 3));
 
 
