@@ -193,3 +193,11 @@ for (let i = 0; i <= lines; i++) {
 }
 console.log(res);
 
+
+const myArray = [];
+let i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i--;
+}
+console.log(myArray);
