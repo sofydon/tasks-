@@ -32,7 +32,7 @@ function secondTask() {
     // при помощи цикла for вывести от 20 до 10 в обратном порядке. когда цикл дойдет до 13 - остановить весь цикл
 
     for (let i = 20; i > 10; i--) {
-        if (i === 13) break; {
+        if (i === 13) {break;} {
             console.log(i);
         }    
     }
@@ -140,8 +140,8 @@ eighthTask();
 // *****
 // ******
 let result = '';
-const length = 7;
-for (let i = 1; i < length; i++) { 
+const leng = 7;
+for (let i = 1; i < leng; i++) { 
     for (let j = 0; j < i; j++) {
         result +="*";
     }
@@ -201,3 +201,10 @@ while (i >= 0) {
   i--;
 }
 console.log(myArray);
+
+const myArra = [];
+for (let i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
+console.log(myArray);
+

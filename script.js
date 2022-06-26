@@ -225,4 +225,11 @@ var repeatIt = function(str, n) {
 };
 console.log(repeatIt('hi', 3));
 
+/* When provided with a letter, return its position in the alphabet. */
+function position(letter){
+    let res = letter.charCodeAt(0) - 96;
+    return "Position of alphabet: " + res;
+}
+console.log(position('z'));
+
 
