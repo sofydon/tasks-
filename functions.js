@@ -98,7 +98,90 @@ const recordCollection = {
       }
     return records;
   }
-  
   console.log(updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me"));
   console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
   console.log(updateRecords(recordCollection, 2468, "tracks", "Free"));
+
+
+  function apple(x){
+    if (x * x > 1000) {
+      return "It's hotter than the sun!!";  
+    } else {
+      return "Help yourself to a honeycomb Yorkie for the glovebox.";
+    }
+  }
+  console.log(apple(50));
+
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+  console.log(multiply([2], 1));
+
+  function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+  console.log(multiply([2], 1));
+
+  function sum(arr, n) {
+    if (n <= 0) {
+      return 0; 
+    } else {
+      return sum (arr, n - 1) + arr [n - 1];
+    }
+  }
+  console.log(sum([2, 3, 4], 1));
+  console.log(sum([1], 0));
+
+
+  const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ];
+  
+  function lookUpProfile(name, prop) {
+    // Only change code below this line
+    for (let i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName == name) {
+          if (contacts[i].hasOwnProperty(prop)) {
+            return contacts[i][prop];
+          } else {
+            return 'No such property';
+          }           
+      }     
+    }
+    return 'No such contact';
+  
+    // Only change code above this line
+  }
+  
+  console.log(lookUpProfile("Kristian", "lastName"));

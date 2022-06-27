@@ -196,15 +196,27 @@ console.log(res);
 
 const myArray = [];
 let i = 5;
-while (i >= 0) {
-  myArray.push(i);
-  i--;
-}
+    while (i >= 0) {
+    myArray.push(i);
+    i--;
+    }
 console.log(myArray);
 
 const myArra = [];
-for (let i = 9; i > 0; i -= 2) {
-  myArray.push(i);
+    for (let i = 9; i > 0; i -= 2) {
+    myArray.push(i);
 }
 console.log(myArray);
+
+function multiplyAll(arr) {
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        product *= arr[i][j];
+      }
+    }
+    return product;
+}
+console.log(multiplyAll([[5, 1], [0.2, 4, 0.5], [3, 9]]));
+
 
