@@ -254,4 +254,16 @@ function solution (roman) {
     return integer;     
 }
 console.log(solution("XIV"));
+
+/* Implement String#digit? (in Java StringUtils.isDigit(String)), 
+which should return true if given object is a digit (0-9), false otherwise.*/ 
+String.prototype.digit = function() {
+    return /^\d$/i.test(this);
+  };
+console.log('14'.digit());
+
+let text = "titanic";
+let myRegex = /t[a-z]*?i/; // Change this line
+let result = text.match(myRegex);
+console.log(result);
   
