@@ -266,4 +266,18 @@ let text = "titanic";
 let myRegex = /t[a-z]*?i/; // Change this line
 let result = text.match(myRegex);
 console.log(result);
-  
+
+/*In this kata you will create a function that takes in a list and returns a list with the reverse order.*/ 
+function reverseList(list) {
+    let result = [];
+    for(let i = 0; i < list.length; i++){
+        result[i] = list[(list.length -1) - i];
+    }
+    return result;
+}
+console.log(reverseList([1, 2, 3, 4]));
+
+function reverseLi(list) {
+    return list.reverse();
+}
+console.log(reverseLi([1, 2, 3, 5]));
