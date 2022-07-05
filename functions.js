@@ -65,7 +65,6 @@ function disemvowel(str) {
 console.log(disemvowel("This website is for losers LOL!"));
 
 
-
 const recordCollection = {
     2548: {
       albumTitle: 'Slippery When Wet',

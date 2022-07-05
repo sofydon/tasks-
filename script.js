@@ -322,3 +322,53 @@ function howManydays(month){
     return days;
 }
 console.log(howManydays(3));
+
+/* Coding in function padIt, function accept 2 parameters:
+str, it's a string representing the string to pad, we need pad some "*" at leftside or rightside of str
+n, it's a number, how many times to pad the string. */
+function padIt(str,n){
+    while (n > 0) {
+        if (n%2==0){
+            str = str + "*";
+        } else {
+            str = "*" + str;
+        }
+        n--;
+    }
+    return str;
+}
+console.log(padIt("a",3));
+
+/* Coding in function pickIt, function accept 1 parameter:arr, it's a number array, 
+we need traverse arr by using for loop, if element is odd number, push it to array odd,
+if it's a even number, push it to array even.*/
+function pickIt(arr){
+    var odd=[],even=[];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i]%2 == 0){
+            even.push(arr[i]);
+        } else {
+            odd.push(arr[i]);
+        }
+    }
+    return [odd,even];
+}
+console.log(pickIt([1,2,3]));
+/* Coding in function grabDoll. function accept 1 parameter:dolls. it's a string array, a list of some dolls.
+You need traverse dolls by using for loop. If element is "Hello Kitty" or "Barbie doll", you should push it 
+to a bag(bag is an array, I've defined in the function); if it's other strings, we should use continue skip it.
+When the bag has three element, bag is full. You should use break jump out the loop; If bag is not full, 
+you should traverse dolls until the last element.*/ 
+function grabDoll(dolls){
+    var bag=[];
+    for (let i = 0; i < dolls.length; i++){
+        if (dolls[i] == "Hello Kitty" || dolls[i] == "Barbie doll") {
+            bag.push(dolls[i]); 
+            if (bag.length === 3) {break;}  
+        } else {
+            continue;
+        }   
+    }
+    return bag;
+}
+console.log(grabDoll(["Mickey Mouse","Barbie doll","Hello Kitty","Hello Kitty","Hello Kitty","Snow white"]));
