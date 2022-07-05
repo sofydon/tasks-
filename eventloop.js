@@ -219,4 +219,12 @@ function multiplyAll(arr) {
 }
 console.log(multiplyAll([[5, 1], [0.2, 4, 0.5], [3, 9]]));
 
+function sumAll(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+console.log(sumAll([1,2,3]));
 
